@@ -4,6 +4,9 @@
 #include <GLFW/glfw3.h>
 #include <OLASConfig.h>
 
+#ifdef USE_ADDER
+	#include <adder.h>
+#endif
 using namespace std;
 
 //float add(float a,float b);
@@ -22,7 +25,7 @@ int main(){
 	//cout << factorial(6);
 	//cout << "\n\n\n";
 
-#ifdef USER_ADDER
+#ifdef USE_ADDER
 	cout << "using adder lib: " << add(62.1f, 532.1f) << "\n\n";
 #else
 	cout << "not using adder lib: " << 72.1f + 73.7f << "\n\n";	

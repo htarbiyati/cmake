@@ -1,9 +1,4 @@
 #define OLAS_VERSION_MAJOR @OLAS_VERSION_MAJOR@
 #define OLAS_VERSION_MINOR @OLAS_VERSION_MINOR@
 
-#cmakedefine USER_ADDER
-
-// #ifdef USE_ADDER
-//   #include <Adder.h>
-// #endif
-
+#cmakedefine USE_ADDER
