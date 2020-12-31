@@ -1,6 +1,8 @@
 #include <iostream>
-#include "adder.h"
+// #include "adder.h"
+
 #include <GLFW/glfw3.h>
+#include <OLASConfig.h>
 
 using namespace std;
 
@@ -19,7 +21,12 @@ int main(){
 	//cout << "HelloW!\n"; 
 	//cout << factorial(6);
 	//cout << "\n\n\n";
-	cout << add(62.1f, 532.1f) << "\n\n";
+
+#ifdef USER_ADDER
+	cout << "using adder lib: " << add(62.1f, 532.1f) << "\n\n";
+#else
+	cout << "not using adder lib: " << 72.1f + 73.7f << "\n\n";	
+#endif
 
 	GLFWwindow *window;
 	if( !glfwInit() )
