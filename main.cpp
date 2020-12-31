@@ -1,5 +1,7 @@
 #include <iostream>
 #include "adder.h"
+#include <GLFW/glfw3.h>
+
 using namespace std;
 
 //float add(float a,float b);
@@ -18,5 +20,37 @@ int main(){
 	//cout << factorial(6);
 	//cout << "\n\n\n";
 	cout << add(62.1f, 532.1f) << "\n\n";
+
+	GLFWwindow *window;
+	if( !glfwInit() )
+	{
+			fprintf( stderr, "Failed to initialize GLFW\n" );
+			exit( EXIT_FAILURE );
+	}
+
+	  window = glfwCreateWindow( 300, 300, "Gears", NULL, NULL );
+    if (!window)
+    {
+        fprintf( stderr, "Failed to open GLFW window\n" );
+        glfwTerminate();
+        exit( EXIT_FAILURE );
+    }
+
+		  while( !glfwWindowShouldClose(window) )
+    {
+        // Draw gears
+        // draw();
+
+        // Update animation
+        // animate();
+
+        // Swap buffers
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+
+    // Terminate GLFW
+    glfwTerminate();
+
 	return 0;
 }

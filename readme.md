@@ -6,3 +6,5 @@
 ## OPTIONS
 ## VARIABLES
 ## DYNAMIC LIBS
+
+git submodules update --init --recursive
